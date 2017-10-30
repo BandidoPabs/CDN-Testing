@@ -1,0 +1,22 @@
+Name: Pablo Salinas
+
+Implementation Details:
+
+Used python 2.7.12 with the following libraries:
+  1. os
+  2. sys
+  3. urllib
+  4. time
+  5. pdb
+ 
+ Basically opened the file and read it into a list from the command line using sys. Created a folder to store the downloaded files using os.Created a path list to hold path information of location of downloaded files. Used the urllib to download the urls and the time library to record the time downloaded as well as os to gather file size. Sorted both of the list based on downloaded time and created the two folders for FastDownloaded and SlowDownloaded. To determine which half of the list got sent to which folder, I took the lenght of the list and divided by 2. Items below that number according to how the list got sorted got sent to the different folders. Finally, I just printed out the report in the format asked for in the homework.
+ 
+
+
+Limitations:
+
+1. There should be no blank line in the urllist. It will spit out an error for empty string while trying to download.
+2. Uneven number of files to download may put a fast enough file in the wrong folder based on location of the index.
+3. No html parsing, urls must lead directly to the image. If hosted on the an image site such as imgur or plainview, the file will download but the file will be unviewable.
+4. Does not check for directory to be downloaded in. Will create a directory and store the images there.
+
